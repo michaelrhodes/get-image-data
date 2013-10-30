@@ -17,6 +17,10 @@ module.exports = function(path, callback) {
     )
 
     var data = shared(canvas)
-    callback(null, data(image))
+    callback(null, {
+      data: data(image),
+      height: image.height,
+      width: image.width
+    })
   })  
 }
