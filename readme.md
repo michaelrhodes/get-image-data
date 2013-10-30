@@ -22,7 +22,7 @@ image('./image.jpg', function(error, data) {
     var red = data[i]
     var green = data[i + 1]
     var blue = data[i + 2]
-    var alpha = data[1 + 3]  
+    var alpha = data[i + 3]  
   }
 })
 ```
