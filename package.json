@@ -1,0 +1,49 @@
+{
+  "name": "get-image-data",
+  "version": "0.0.0",
+  "description": "A browser/server utility that extracts RGBA data from images.",
+  "main": "index.js",
+  "browser": "browser.js",
+  "browserify": {
+    "transform": ["brfs"]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "canvas": "~1.1.1"
+  },
+  "devDependencies": {
+    "tape": "~2.1.0",
+    "brfs": "~0.0.8"
+  },
+  "scripts": {
+    "test": "tape ./test/server.js"
+  },
+  "testling": {
+    "files": "./test/browser.js",
+    "browsers": {
+      "ie": [8, 9, 10],
+      "chrome": [20, 25, 29],
+      "firefox": [4, 19, 24],
+      "safari": [5.1, 6],
+      "opera": [10, 12, 15],
+      "iphone": [6],
+      "android": [4.2]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:michaelrhodes/get-image-data.git"
+  },
+  "keywords": [
+    "image",
+    "data",
+    "rgba"
+  ],
+  "author": "Michael Rhodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelrhodes/get-image-data/issues"
+  }
+}
