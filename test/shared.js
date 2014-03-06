@@ -2,7 +2,15 @@ var run = require('tape').test
 var expected = require('./expected')
 
 module.exports = function(image, path) {
-  run('it works', function(test) {
+  run('it returns an ImageData object', function(test) {
+    test.plan(1)
+    image(path.trad, function(error, info) {
+      var type = info.constructor.toString()
+      test.ok(/ImageData/.test(type), 'it does')
+    })
+  })
+
+  run('it returns the expected data', function(test) {
     test.plan(9)
 
     image(path.trad, function(error, info) {

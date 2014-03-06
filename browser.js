@@ -25,11 +25,6 @@ module.exports = function(path, callback) {
   image.src = path
   image.onerror = callback
   image.onload = function() {
-    var data = shared(canvas)
-    callback(null, {
-      data: data(image),
-      height: image.height,
-      width: image.width
-    })
+    callback(null, shared(canvas)(image))
   }
 }

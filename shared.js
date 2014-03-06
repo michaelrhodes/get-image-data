@@ -4,10 +4,9 @@ module.exports = function(canvas) {
     canvas.width = image.width
     canvas.height = image.height
     context.drawImage(image, 0, 0)
-    var raw = context.getImageData(
+    return context.getImageData(
       0, 0, image.width, image.height
     )
-    return raw.data
   }
 }
  
