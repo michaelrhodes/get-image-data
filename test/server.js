@@ -1,7 +1,10 @@
 var data = require('../')
+var fs = require('fs')
 
-require('./shared')(data, {
-  trad: __dirname + '/images/trad.jpg',
-  jerry: __dirname + '/images/jerry.jpg',
-  astronaut: __dirname + '/images/astronaut.jpg'
+fs.readFile(__dirname + '/images/astronaut.jpg', function(err, buf){
+  require('./shared')(data, {
+    trad: __dirname + '/images/trad.jpg',
+    jerry: __dirname + '/images/jerry.jpg',
+    astronaut: buf
+  })
 })
