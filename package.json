@@ -1,6 +1,6 @@
 {
   "name": "get-image-data",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A browser/server utility that extracts RGBA data from images.",
   "main": "index.js",
   "browser": "browser.js",
