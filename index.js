@@ -1,27 +1,19 @@
 var fs = require('fs')
 var Canvas = require('canvas')
+var get = require('get-image')
 var shared = require('./shared')
 
-module.exports = function(input, callback) { 
-  if (Buffer.isBuffer(input)) {
-    load(null, input)
-  } else {
-    fs.readFile(input, load)
-  }
-
-  function load(error, buffer) {
+module.exports = function (input, callback) {
+  get(input, function(error, image) {
     if (error) {
       callback(error)
       return
     }
-
-    var image = new Canvas.Image
-    image.src = buffer
-
+ 
     var canvas = new Canvas(
       image.width, image.height
     )
 
     callback(null, shared(canvas)(image))
-  } 
+  })
 }

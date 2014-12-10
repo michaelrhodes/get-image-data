@@ -1,3 +1,4 @@
+var get = require('get-image')
 var shared = require('./shared')
 
 var canvas = null
@@ -17,14 +18,9 @@ module.exports = function(path, callback) {
     )) 
   }
 
-  var image = new Image 
-  if (!/^data/.test(path)) {
-    image.crossOrigin = true
-  }
-
-  image.src = path
-  image.onerror = callback
-  image.onload = function() {
-    callback(null, shared(canvas)(image))
-  }
+  get(path, function(error, image) {
+    error ?
+      callback(error) :
+      callback(null, shared(canvas)(image))
+  })
 }
