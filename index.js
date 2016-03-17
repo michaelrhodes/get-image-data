@@ -14,6 +14,11 @@ module.exports = function (input, callback) {
       image.width, image.height
     )
 
-    callback(null, shared(canvas)(image))
+    try {
+      callback(null, shared(canvas)(image))
+    }
+    catch (e) {
+      callback(e)
+    }
   })
 }
