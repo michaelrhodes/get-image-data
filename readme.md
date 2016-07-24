@@ -22,11 +22,11 @@ image('./image.jpg', function(error, info) {
   var width = info.width
   var data = info.data
 
-  for (var i = 0, l = data.length, i < l; i += 4) {
+  for (var i = 0, l = data.length; i < l; i += 4) {
     var red = data[i]
     var green = data[i + 1]
     var blue = data[i + 2]
-    var alpha = data[i + 3]  
+    var alpha = data[i + 3]
   }
 })
 ```
