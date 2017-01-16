@@ -15,7 +15,7 @@ module.exports = function(path, callback) {
     return callback(new Error(
       'Your browser doesn’t the ' +
       '<canvas> element'
-    )) 
+    ))
   }
 
   get(path, function(error, image) {

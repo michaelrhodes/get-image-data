@@ -9,7 +9,7 @@ module.exports = function (input, callback) {
       callback(error)
       return
     }
- 
+
     var canvas = new Canvas(
       image.width, image.height
     )

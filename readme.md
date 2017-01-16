@@ -1,6 +1,6 @@
 # get-image-data
 get-image-data is a browser/server utility that extracts RGBA data from images. It also provides the image’s height and width.
- 
+
 [![Build status](https://travis-ci.org/michaelrhodes/get-image-data.svg?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
 
 [![Browser support](https://ci.testling.com/michaelrhodes/get-image-data.png)](https://ci.testling.com/michaelrhodes/get-image-data)
