@@ -8,49 +8,30 @@
     "test": "test"
   },
   "dependencies": {
-    "canvas": "~1.3.5",
-    "get-image": "~1.0.0"
+    "get-image": "~2.0.0"
+  },
+  "peerDependencies": {
+    "canvas": "~1.6.2"
   },
   "devDependencies": {
     "tape": "~2.1.0",
+    "testling": "~1.7.1",
     "brfs": "~0.0.8"
   },
   "scripts": {
-    "test": "tape ./test/server.js"
+    "test": "tape ./test/server.js",
+    "test:browser": "testling -u"
   },
   "testling": {
     "files": "./test/browser.js",
     "browsers": {
-      "ie": [
-        8,
-        9,
-        10
-      ],
-      "chrome": [
-        20,
-        25,
-        29
-      ],
-      "firefox": [
-        4,
-        19,
-        24
-      ],
-      "safari": [
-        5.1,
-        6
-      ],
-      "opera": [
-        10,
-        12,
-        15
-      ],
-      "iphone": [
-        6
-      ],
-      "android": [
-        4.2
-      ]
+      "ie": [8, 9, 10],
+      "chrome": [20, 25, 29],
+      "firefox": [4, 19, 24],
+      "safari": [5.1, 6],
+      "opera": [10, 12, 15],
+      "iphone": [6],
+      "android": [4.2]
     }
   },
   "repository": {
