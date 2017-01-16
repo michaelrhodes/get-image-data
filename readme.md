@@ -1,7 +1,7 @@
 # get-image-data
 get-image-data is a browser/server utility that extracts RGBA data from images. It also provides the image’s height and width.
  
-[![Build status](https://travis-ci.org/michaelrhodes/get-image-data.png?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
+[![Build status](https://travis-ci.org/michaelrhodes/get-image-data.svg?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
 
 [![Browser support](https://ci.testling.com/michaelrhodes/get-image-data.png)](https://ci.testling.com/michaelrhodes/get-image-data)
 
@@ -10,6 +10,10 @@ get-image-data is a browser/server utility that extracts RGBA data from images. 
 ``` sh
 $ npm install get-image-data
 ```
+**note: canvas is not installed alongside get-image-data**
+
+get-image-data requires [automattic/node-canvas](https://github.com/automattic/node-canvas) for its server/node variant, however, to avoid browser-only users from having to endure the native compilation process, it needs to be npm installed separately.
+
 
 ## Usage
 
