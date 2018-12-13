@@ -10,7 +10,7 @@ module.exports = function (input, callback) {
       return
     }
 
-    var canvas = new Canvas(
+    var canvas = Canvas.createCanvas(
       image.width, image.height
     )
 
