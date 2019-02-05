@@ -1,30 +1,23 @@
 # get-image-data
-get-image-data is a browser/server utility that extracts RGBA data from images. It also provides the image’s height and width.
+isomorphic image data extraction
 
-[![Build status](https://travis-ci.org/michaelrhodes/get-image-data.svg?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
+[![build status](https://travis-ci.org/michaelrhodes/get-image-data.svg?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
 
-[![Browser support](https://ci.testling.com/michaelrhodes/get-image-data.png)](https://ci.testling.com/michaelrhodes/get-image-data)
+[![browser support](https://ci.testling.com/michaelrhodes/get-image-data.png)](https://ci.testling.com/michaelrhodes/get-image-data)
 
-## Install
-
+## install
 ``` sh
-$ npm install get-image-data
+npm install get-image-data [sharp]
 ```
-**note: canvas is not installed alongside get-image-data**
 
-get-image-data requires [automattic/node-canvas](https://github.com/automattic/node-canvas) for its server/node variant, however, to avoid browser-only users from having to endure the native compilation process, it needs to be npm installed separately.
-
-
-## Usage
-
-### Browser & Server
+## use
 ``` js
 var image = require('get-image-data')
 
-image('./image.jpg', function(error, info) {
+image('./image.jpg', function (err, info) {
+  var data = info.data
   var height = info.height
   var width = info.width
-  var data = info.data
 
   for (var i = 0, l = data.length; i < l; i += 4) {
     var red = data[i]
@@ -33,11 +26,16 @@ image('./image.jpg', function(error, info) {
     var alpha = data[i + 3]
   }
 })
+
+// Extract data faster with `sharp`
+var image = require('get-image-data/native')
 ```
 
-### Note
-The image data will be contained within either a [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/API/Uint8ClampedArray) or a [CanvasPixelArray](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPixelArray) depending on the environment. This shouldn’t be a problem, but it’s worth knowing.
+## obey
+Copyright 2013–2019 Michael Rhodes
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### License
-[MIT](http://opensource.org/licenses/MIT)
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

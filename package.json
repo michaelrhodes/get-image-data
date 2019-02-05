@@ -1,51 +1,24 @@
 {
   "name": "get-image-data",
+  "author": "Michael Rhodes",
   "version": "3.0.1",
-  "description": "A browser/server utility that extracts RGBA data from images.",
-  "main": "index.js",
+  "main": "node.js",
   "browser": "browser.js",
-  "directories": {
-    "test": "test"
-  },
+  "license": "MIT",
   "dependencies": {
-    "get-image": "~2.0.0"
+    "jimp": "^0.6.0"
   },
   "peerDependencies": {
-    "canvas": "~1.6.2"
+    "sharp": "^0.21.3"
   },
   "devDependencies": {
-    "tape": "~2.1.0",
-    "testling": "~1.7.1",
-    "brfs": "~0.0.8"
+    "brfs": "^2.0.1",
+    "dexy": "github:michaelrhodes/dexy",
+    "wzrd": "^1.5.0"
   },
   "scripts": {
-    "test": "tape ./test/server.js",
-    "test:browser": "testling -u"
-  },
-  "testling": {
-    "files": "./test/browser.js",
-    "browsers": {
-      "ie": [8, 9, 10],
-      "chrome": [20, 25, 29],
-      "firefox": [4, 19, 24],
-      "safari": [5.1, 6],
-      "opera": [10, 12, 15],
-      "iphone": [6],
-      "android": [4.2]
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:michaelrhodes/get-image-data.git"
-  },
-  "keywords": [
-    "image",
-    "data",
-    "rgba"
-  ],
-  "author": "Michael Rhodes",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/michaelrhodes/get-image-data/issues"
+    "test": "dexy test/node.js",
+    "test:native": "dexy test/native.js",
+    "test:browser": "wzrd test/browser.js -t brfs"
   }
 }

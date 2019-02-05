@@ -1,26 +1,25 @@
-var get = require('get-image')
-var shared = require('./shared')
+var canvas = document.createElement('canvas')
 
-var canvas = null
-var supported = (function(document) {
-  canvas = document.createElement('canvas')
-  return !!(
-    canvas.getContext &&
-    canvas.getContext('2d')
-  )
-})(document)
+module.exports = get
 
-module.exports = function(path, callback) {
-  if (!supported) {
-    return callback(new Error(
-      'Your browser doesn’t the ' +
-      '<canvas> element'
-    ))
+function get (src, cb) {
+  var img = new Image
+  if (!/^data/.test(src))
+    img.crossOrigin = ''
+
+  img.src = src
+  img.onerror = cb
+  img.onload = function () {
+    data(img, cb)
   }
+}
 
-  get(path, function(error, image) {
-    error ?
-      callback(error) :
-      callback(null, shared(canvas)(image))
-  })
+function data (img, cb) {
+  var ctx = canvas.getContext('2d')
+  canvas.width = img.width
+  canvas.height = img.height
+  ctx.drawImage(img, 0, 0)
+  cb(null, ctx.getImageData(
+    0, 0, img.width, img.height
+  ))
 }
