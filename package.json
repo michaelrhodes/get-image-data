@@ -19,6 +19,6 @@
   "scripts": {
     "test": "dexy test/node.js",
     "test:native": "dexy test/native.js",
-    "test:browser": "wzrd test/browser.js -t brfs"
+    "test:browser": "wzrd test/browser.js -- -t brfs"
   }
 }
