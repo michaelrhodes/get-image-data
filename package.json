@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "brfs": "^2.0.1",
-    "dexy": "github:michaelrhodes/dexy",
+    "dexy": "github:michaelrhodes/dexy#1.0.1",
     "wzrd": "^1.5.0"
   },
   "scripts": {
