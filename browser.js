@@ -1,6 +1,7 @@
 var canvas = document.createElement('canvas')
 
 module.exports = get
+module.exports.data = data
 
 function get (src, cb) {
   var img = new Image
@@ -10,16 +11,16 @@ function get (src, cb) {
   img.src = src
   img.onerror = cb
   img.onload = function () {
-    data(img, cb)
+    cb(null, data(img))
   }
 }
 
-function data (img, cb) {
+function data (img) {
   var ctx = canvas.getContext('2d')
   canvas.width = img.width
   canvas.height = img.height
   ctx.drawImage(img, 0, 0)
-  cb(null, ctx.getImageData(
+  return ctx.getImageData(
     0, 0, img.width, img.height
-  ))
+  )
 }
