@@ -1,7 +1,7 @@
 {
   "name": "get-image-data",
   "author": "Michael Rhodes",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "main": "node.js",
   "browser": "browser.js",
   "license": "MIT",

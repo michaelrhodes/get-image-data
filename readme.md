@@ -7,7 +7,7 @@ isomorphic image data extraction
 
 ## install
 ``` sh
-npm install get-image-data [sharp]
+npm install michaelrhodes/get-image-data#4.1.0 [sharp]
 ```
 
 ## use
