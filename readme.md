@@ -3,11 +3,9 @@ isomorphic image data extraction
 
 [![build status](https://travis-ci.org/michaelrhodes/get-image-data.svg?branch=master)](https://travis-ci.org/michaelrhodes/get-image-data)
 
-[![browser support](https://ci.testling.com/michaelrhodes/get-image-data.png)](https://ci.testling.com/michaelrhodes/get-image-data)
-
 ## install
 ``` sh
-npm install michaelrhodes/get-image-data#4.1.0 [sharp]
+npm install michaelrhodes/get-image-data#4.1.1 [sharp]
 ```
 
 ## use
