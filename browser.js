@@ -1,5 +1,3 @@
-var canvas = document.createElement('canvas')
-
 module.exports = get
 module.exports.data = data
 
@@ -16,6 +14,7 @@ function get (src, cb) {
 }
 
 function data (img) {
+  var canvas = document.createElement('canvas')
   var ctx = canvas.getContext('2d')
   canvas.width = img.width
   canvas.height = img.height
