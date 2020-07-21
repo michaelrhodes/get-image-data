@@ -6,14 +6,14 @@
   "browser": "browser.js",
   "license": "MIT",
   "dependencies": {
-    "jimp": "^0.6.0"
+    "jimp": "^0.14.0"
   },
   "peerDependencies": {
-    "sharp": "^0.21.3"
+    "sharp": "^0.25.4"
   },
   "devDependencies": {
     "brfs": "^2.0.1",
-    "dexy": "github:michaelrhodes/dexy#1.0.1",
+    "dexy": "github:michaelrhodes/dexy#1.0.5",
     "wzrd": "^1.5.0"
   },
   "scripts": {
