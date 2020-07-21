@@ -1,9 +1,6 @@
 *
-!.npmignore
-!.travis.yml
 !package.json
 !readme.md
 !browser.js
 !native.js
 !node.js
-!test

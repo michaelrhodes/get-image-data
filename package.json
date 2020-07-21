@@ -1,19 +1,19 @@
 {
   "name": "get-image-data",
   "author": "Michael Rhodes",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "main": "node.js",
   "browser": "browser.js",
-  "license": "MIT",
-  "dependencies": {
-    "jimp": "^0.6.0"
-  },
+  "license": "CC0-1.0",
   "peerDependencies": {
-    "sharp": "^0.21.3"
+    "jimp": "^0.14.0",
+    "sharp": "^0.25.4"
   },
   "devDependencies": {
     "brfs": "^2.0.1",
-    "dexy": "github:michaelrhodes/dexy#1.0.1",
+    "dexy": "github:michaelrhodes/dexy#1.0.5",
+    "jimp": "^0.14.0",
+    "sharp": "^0.25.4",
     "wzrd": "^1.5.0"
   },
   "scripts": {
